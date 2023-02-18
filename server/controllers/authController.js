@@ -43,19 +43,16 @@ const login = async (req, res, next) => {
         ),
       ];
       if (getPositionError) return next(getPositionError);
-
-      return res
-        .json({
-          user: {
-            ...userWithoutPassword,
-            id: employeePosition[0].id,
-            fullname: employeePosition[0].fullname,
-          },
-          accessToken,
-          position: employeePosition[0].position_id.name,
-          permission: tempPermission,
-        })
-        .send();
+      return res.send({
+        user: {
+          ...userWithoutPassword,
+          id: employeePosition[0].id,
+          fullname: employeePosition[0].fullname,
+        },
+        accessToken,
+        position: employeePosition[0].position_id.name,
+        permission: tempPermission,
+      });
     } else {
       return res.status(401).send("Password is incorrect");
     }
