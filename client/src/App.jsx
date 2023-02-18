@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Admin from "./pages/Admin/Admin";
 import HR from "./pages/Admin/HR/HR";
 import Dashboard from "./pages/Admin/Dashboard/Dashboard";
@@ -36,7 +36,7 @@ const App = () => {
   }, [user]);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App" style={{ height: "100vh" }}>
         <Routes>
           <Route key="login" index element={<Login />}></Route>
@@ -59,7 +59,7 @@ const App = () => {
           />
         </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
