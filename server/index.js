@@ -44,23 +44,23 @@ initAccessControl();
 
 //position vs permission route
 
-app.use("/api/auth", authRoute);
-app.use("/api/bookings", bookingsRoutes);
-app.use("/api/rooms", roomsRoutes);
-app.use("/api/room_features", roomFeaturesRoutes);
-app.use("/api/accounts", accountsRoutes);
-app.use("/api/roomtypes", roomTypesRoutes);
-app.use("/api/users", usersRoutes);
-app.use("/api/positions", positionsRoutes);
-app.use("/api/inventory", inventoriesRoutes);
-app.use("/api/payment", paymentsRoutes);
-app.use("/api/items", itemRoutes);
-app.use("/api/importing", importingsRoutes);
-app.use("/api/features", featuresRoutes);
-app.use("/api/reports", reportRoutes);
-app.use("/api/receipts", receiptRoutes);
-app.use("/api/used_room", usedRoomRoute);
-app.use("/api/has_room_features", hasRoomFeatureRoutes);
+app.use("/auth", authRoute);
+app.use("/bookings", bookingsRoutes);
+app.use("/rooms", roomsRoutes);
+app.use("/room_features", roomFeaturesRoutes);
+app.use("/accounts", accountsRoutes);
+app.use("/roomtypes", roomTypesRoutes);
+app.use("/users", usersRoutes);
+app.use("/positions", positionsRoutes);
+app.use("/inventory", inventoriesRoutes);
+app.use("/payment", paymentsRoutes);
+app.use("/items", itemRoutes);
+app.use("/importing", importingsRoutes);
+app.use("/features", featuresRoutes);
+app.use("/reports", reportRoutes);
+app.use("/receipts", receiptRoutes);
+app.use("/used_room", usedRoomRoute);
+app.use("/has_room_features", hasRoomFeatureRoutes);
 
 app.use("*", handle404Error);
 
